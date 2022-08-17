@@ -1,5 +1,5 @@
 <div class='export-button' >
-    <input type="file" (change)="fileChangeListener(csvFileInput)" [hidden]="true" id="importCsvFileInput" accept=".csv" #csvFileInput>
+    <input type="file" (change)="fileChangeListener(csvFileInput)" (click)="csvFileInput.value = ''" [hidden]="true" id="importCsvFileInput" accept=".csv" #csvFileInput>
     <button mat-flat-button matTooltip="{{ 'Import csv file'}}" color="primary" (click)="uploadCsvFileBtnClick()" class="dialog-button-container">
       <mat-icon>upload_file</mat-icon></button>
 </div>
